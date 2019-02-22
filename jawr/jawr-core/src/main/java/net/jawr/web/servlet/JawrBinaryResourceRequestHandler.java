@@ -481,8 +481,8 @@ public class JawrBinaryResourceRequestHandler extends JawrRequestHandler {
 		if (isValidRequestedPath(requestedPath)) {
 
 			try {
-				writeContent(requestedPath, null, response);
 				response.setContentType(contentType);
+				writeContent(requestedPath, null, response);
 				copyDone = true;
 			} catch (ResourceNotFoundException e) {
 				// Nothing to do here
